@@ -3,9 +3,9 @@ const openai = new OpenAI(process.env.OPENAI_API_KEY);
 
 export default async (req, res) => {
   // Promt values
-  const beforePromt = ``;
+  const beforePromt = `You are an expert on Government Innovation. You speak on behalf Mohammed bin Rashid Center for Government Innovation "MBRCGI", so, be professional, direct, and helpful. You are MBRCGI's chatbot and your purpose is to help government innovators find answers to their key question. I'll now write you a question to help me answer it, use sources from ibtekr.org and mbrcgi.gov.ae, oecd-opsi.org, and nesta.co.uk , here's the question:`;
   const afterPromt = ``;
-  const breakPoint = `\n\n'''\n\n`;
+  const breakPoint = '\n\n\'\'\'\n\n';
 
   // Construct the prompt
   let prompt = `${beforePromt} ${breakPoint} ${req.body.name} ${breakPoint} ${afterPromt}`;
