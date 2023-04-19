@@ -54,15 +54,12 @@ export default function Home() {
           </h1>
           <p className="block text-sm text-center font-medium text-gray-500">
           InnovateGPT is a powerful tool designed to help government innovators find valuable solutions quickly and efficiently, allowing them to focus on their important work of serving the public.
-
-
-n
           </p>
 
           {/* Card & Input field  */}
           <div className="text-center relative backdrop-filter overflow-hidden mb-6 max-w w-full rounded-md  ring-1 ring-black ring-opacity-0 p-4 ">
             <textarea
-              className="max-w shadow-sm      min-h-64  block w-full focus:ring-pink-500 focus:border-pink-500 sm:text-sm border border-gray-300 rounded-md"
+              className="max-w shadow-sm min-h-64  block w-full focus:ring-pink-500 focus:border-pink-500 sm:text-sm border border-gray-300 rounded-md"
               type="textarea"
               value={query}
               onChange={(event) => setQuery(event.target.value)}
@@ -80,7 +77,7 @@ n
             </button>
 
             <div className="mt-5 p-5 text-sm text-gray-900 border-t-2 border-slate-200 ">
-              {isLoading ? <div>Loading ...</div> : <span> {data.text} </span>}
+              {isLoading ? <div>Loading your answer...</div> : <span> {data.text} </span>}
               {/* {lorem} */}
             </div>
           </div>
